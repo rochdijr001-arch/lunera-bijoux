@@ -1,0 +1,254 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Inter", "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-pure-white: #ffffff;
+  --color-soft-white: #faf8f5;
+  --color-champagne: #f5e7d0;
+  --color-light-gold: #d6b36a;
+  --color-rich-gold: #c9a227;
+  --color-deep-gold: #b8901f;
+  --color-luxury-black: #111111;
+  --color-soft-gray: #eaeaea;
+}
+
+:root {
+  /* Luxury Gold & White Palette */
+  --pure-white: #ffffff;
+  --soft-white: #faf8f5;
+  --champagne: #f5e7d0;
+  --light-gold: #d6b36a;
+  --rich-gold: #c9a227;
+  --deep-gold: #b8901f;
+  --luxury-black: #111111;
+  --soft-gray: #eaeaea;
+
+  --background: var(--soft-white);
+  --foreground: var(--luxury-black);
+  --card: var(--pure-white);
+  --card-foreground: var(--luxury-black);
+  --popover: var(--pure-white);
+  --popover-foreground: var(--luxury-black);
+  --primary: var(--rich-gold);
+  --primary-foreground: var(--pure-white);
+  --secondary: var(--champagne);
+  --secondary-foreground: var(--luxury-black);
+  --muted: var(--soft-white);
+  --muted-foreground: #555555;
+  --accent: var(--light-gold);
+  --accent-foreground: var(--pure-white);
+  --destructive: #991b1b;
+  --destructive-foreground: var(--pure-white);
+  --border: var(--soft-gray);
+  --input: var(--soft-white);
+  --ring: var(--light-gold);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Fluid Spacing & Layout */
+  --section-padding-y: clamp(4rem, 12vw, 12rem);
+  --section-padding-x: clamp(1.5rem, 5vw, 8rem);
+  --container-max-width: 1440px;
+  --tv-max-width: 1920px;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.01em;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    cursor: default;
+  }
+
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    cursor: pointer;
+  }
+
+  h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 8vw, 7rem);
+    line-height: 1.1;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.2;
+    font-weight: 300;
+  }
+
+  h3 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: clamp(0.9rem, 1.2vw, 1.125rem);
+    line-height: 1.6;
+    color: var(--muted-foreground);
+  }
+
+  .max-luxury-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--section-padding-x);
+    padding-right: var(--section-padding-x);
+    max-width: var(--container-max-width);
+  }
+
+  @media (min-width: 1921px) {
+    .max-luxury-container {
+      max-width: var(--tv-max-width);
+    }
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: clamp(0.6rem, 0.8vw, 0.75rem);
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: 600;
+    color: var(--light-gold);
+  }
+
+  .input {
+    width: 100%;
+    background: var(--pure-white);
+    border: 1px solid var(--border);
+    padding: 1rem 1.25rem;
+    font-family: var(--font-sans);
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    color: var(--luxury-black);
+    transition: all 0.4s var(--ease-premium);
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: var(--light-gold);
+    box-shadow: 0 0 0 1px var(--light-gold);
+  }
+}
+
+/* Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slow-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1.2s var(--ease-premium) forwards;
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+/* Luxury Utils */
+.btn-luxury {
+  @apply inline-block px-12 py-5 bg-rich-gold text-pure-white text-[10px] uppercase tracking-[0.5em] font-semibold transition-all duration-700 relative overflow-hidden shadow-sm;
+}
+
+.btn-luxury:hover {
+  @apply bg-deep-gold shadow-lg -translate-y-0.5;
+}
+
+.btn-outline-luxury {
+  @apply inline-block px-12 py-5 border border-light-gold text-light-gold text-[10px] uppercase tracking-[0.5em] font-semibold bg-pure-white transition-all duration-700 relative overflow-hidden;
+}
+
+.btn-outline-luxury:hover {
+  @apply bg-light-gold text-pure-white shadow-md;
+}
+
+/* Specific Effects */
+.glass-nav {
+  @apply bg-pure-white/80 backdrop-blur-xl border-b border-light-gold/10;
+}
+
+.reflection-shine {
+  @apply relative overflow-hidden;
+}
+
+.reflection-shine::after {
+  content: "";
+  @apply absolute top-0 -left-full w-1/2 h-full bg-gradient-to-r from-transparent via-pure-white/40 to-transparent skew-x-[-20deg] opacity-0;
+}
+
+.reflection-shine:hover::after {
+  @apply opacity-100 left-full transition-all duration-1000;
+}
+
+.noise-overlay {
+  @apply fixed inset-0 w-full h-full pointer-events-none z-[9999] opacity-[0.03];
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}

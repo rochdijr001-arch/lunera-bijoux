@@ -1,0 +1,13 @@
+==== Lunéra Bijoux - Admin Dashboard Access ====
+
+URL: http://localhost:8080/admin
+
+Do not store admin passwords in Git.
+Create/reset the admin account using create_admin.cjs with environment variables.
+
+Example:
+SUPABASE_URL="https://your-project.supabase.co" \
+SUPABASE_SERVICE_ROLE_KEY="your-service-role-key" \
+ADMIN_EMAIL="admin@example.com" \
+ADMIN_PASSWORD="use-a-strong-private-password" \
+node create_admin.cjs

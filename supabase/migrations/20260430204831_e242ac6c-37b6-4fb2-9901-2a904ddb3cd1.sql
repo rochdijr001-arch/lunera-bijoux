@@ -1,0 +1,2 @@
+-- Removed unsafe password-reset migration.
+-- Never commit real user passwords or password hashes to source control.
