@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="border-t border-soft-gray mt-32 py-[var(--section-padding-y)] bg-pure-white">
       <div className="max-luxury-container">
         <div className="flex flex-col items-center text-center mb-24 animate-fade-up">
-          <h2 className="text-[clamp(4rem,15vw,12rem)] uppercase tracking-[0.4em] mb-4 text-luxury-black/[0.02] select-none">
+          <h2 className="text-[clamp(4rem,15vw,12rem)] uppercase tracking-[0.4em] mb-4 text-light-gold/[0.18] select-none">
             Lunéra
           </h2>
           <p className="eyebrow text-rich-gold">Élégance · Féminité · Brillance</p>

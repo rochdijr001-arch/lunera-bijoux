@@ -139,9 +139,7 @@ export function AdminLayout() {
       </aside>
 
       <main className="flex-1 overflow-x-hidden min-h-screen">
-        <div className="animate-fade-up">
-          <Outlet />
-        </div>
+        <Outlet />
       </main>
     </div>
   );

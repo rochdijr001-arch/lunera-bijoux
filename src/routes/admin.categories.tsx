@@ -86,7 +86,7 @@ function AdminCategories() {
               {c.name}
             </h2>
 
-            <div className="space-y-4 mb-10">
+            <div className="space-y-4">
               <div className="flex justify-between items-center text-sm border-b border-soft-gray pb-2">
                 <span className="text-muted-foreground">Produits</span>
                 <span className="font-bold flex items-center gap-2">
@@ -104,10 +104,6 @@ function AdminCategories() {
                 </span>
               </div>
             </div>
-
-            <button className="w-full flex items-center justify-center gap-3 py-4 bg-luxury-black text-pure-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-rich-gold transition-all duration-500">
-              Gérer la collection <ArrowRight className="size-4" />
-            </button>
           </div>
         ))}
 

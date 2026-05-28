@@ -270,12 +270,12 @@ function ProductDialog({
   };
 
   return (
-    <div className="fixed inset-0 z-[100] bg-luxury-black/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8">
+    <div className="fixed inset-0 z-[100] bg-luxury-black/90 backdrop-blur-sm overflow-y-auto flex justify-center items-start p-4 sm:p-8">
       <motion.form
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         onSubmit={onSubmit}
-        className="bg-pure-white w-full max-w-3xl my-8 p-10 sm:p-16 relative shadow-2xl border border-rich-gold/20 max-h-[90vh] overflow-y-auto"
+        className="bg-pure-white w-full max-w-3xl my-4 sm:my-8 p-10 sm:p-16 relative shadow-2xl border border-rich-gold/20"
       >
         <button
           type="button"

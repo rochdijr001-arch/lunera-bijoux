@@ -105,17 +105,17 @@ export function Header() {
           </div>
 
           {/* Desktop Header */}
-          <div className="hidden lg:grid grid-cols-3 items-center">
+          <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] items-center">
             {/* Left Nav */}
-            <div className="flex gap-8 text-[10px] tracking-[0.3em] uppercase font-bold text-luxury-black/70">
+            <div className="flex gap-6 xl:gap-8 text-[10px] tracking-[0.3em] uppercase font-bold text-luxury-black/70">
               {nav.slice(0, 3).map((n) => renderLink(n))}
             </div>
 
             {/* Center Logo */}
-            <div className="flex justify-center">
+            <div className="flex justify-center px-8 xl:px-12">
               <Link
                 to="/"
-                className="font-serif text-4xl tracking-[0.25em] uppercase text-luxury-black group"
+                className="font-serif text-4xl tracking-[0.25em] uppercase text-luxury-black group whitespace-nowrap"
               >
                 Lunéra{" "}
                 <span className="text-rich-gold italic font-light group-hover:text-deep-gold transition-colors duration-700">
@@ -125,12 +125,12 @@ export function Header() {
             </div>
 
             {/* Right Nav */}
-            <div className="flex items-center justify-end gap-8">
-              <nav className="flex gap-8 text-[10px] tracking-[0.3em] uppercase font-bold text-luxury-black/70">
+            <div className="flex items-center justify-end gap-6 xl:gap-8">
+              <nav className="flex gap-6 xl:gap-8 text-[10px] tracking-[0.3em] uppercase font-bold text-luxury-black/70">
                 {nav.slice(3, 6).map((n) => renderLink(n))}
               </nav>
-              <div className="h-6 w-px bg-soft-gray mx-2" />
-              <div className="flex items-center gap-4">
+              <div className="h-6 w-px bg-soft-gray mx-1 xl:mx-2" />
+              <div className="flex items-center gap-2 xl:gap-4">
                 <button
                   aria-label="Search"
                   className="p-2 hover:text-rich-gold transition-colors duration-500"

@@ -41,6 +41,11 @@
   --color-deep-gold: #b8901f;
   --color-luxury-black: #111111;
   --color-soft-gray: #eaeaea;
+
+  --color-earth: var(--luxury-black);
+  --color-skin: var(--soft-white);
+  --color-clay: var(--light-gold);
+  --color-sand: var(--champagne);
 }
 
 :root {
