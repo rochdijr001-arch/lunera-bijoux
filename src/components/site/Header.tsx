@@ -209,9 +209,10 @@ export function Header() {
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Menu Overlay */}
-        <AnimatePresence>
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
           {open && (
             <motion.div
               initial={{ opacity: 0, x: "-100%" }}
@@ -278,8 +279,7 @@ export function Header() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
-      </header>
+      </AnimatePresence>
       {/* Spacer to prevent content jump */}
       <div className="h-[60px] lg:h-[100px]" />
     </>
