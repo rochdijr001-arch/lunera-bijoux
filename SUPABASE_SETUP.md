@@ -58,7 +58,7 @@ CREATE TABLE public.orders (
 ALTER TABLE public.orders ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Anyone can place a valid order"
-  ON public.orders FOR INSERT
+  ON public.orders FOR INSERT TO public
   WITH CHECK (
     length(customer_name) BETWEEN 2 AND 100
     AND length(phone) BETWEEN 6 AND 20
