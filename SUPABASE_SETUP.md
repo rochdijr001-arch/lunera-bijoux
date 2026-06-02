@@ -71,6 +71,10 @@ CREATE POLICY "Anyone can place a valid order"
     AND status = 'pending'
   );
 
+CREATE POLICY "Anyone can view their own order by ID"
+  ON public.orders FOR SELECT TO anon, authenticated
+  USING (true);
+
 -- 3. Setup Updated_At Trigger
 CREATE OR REPLACE FUNCTION public.set_updated_at()
 RETURNS TRIGGER
